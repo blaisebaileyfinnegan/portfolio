@@ -1,22 +1,160 @@
 body {
-    background: #fafafa;
+    background: #fefefe;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
+div.content h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 144px;
+    line-height: 170px;
+    color: #aaa;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+div.content p {
+    font-size: 18px;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+header {
+    padding: 15px 50px 5px 50px;
+    background: #fcfcfc;
+}
+
+header h1 {
+    text-align: right;
+    font-size: 48px;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+header div.brand {
+    float: left;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+header div.brand .brand-caption {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 1.3em;
+    color: #aaa;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    height: 75px;
+    margin-top: -10px;
+    white-space: pre;
+
+}
+
+hr {
+    margin: 0px 20px;
+    border: 1px thick #ccc;
+}
+
+nav {
+    float: right;
+    display: inline-block;
+    margin-top: 34px;
+}
+
+header div.bar {
+    width: 100%;
+    float: right;
+}
+
+nav ul {
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul > li {
+    display: inline-block;
+}
+
+nav ul > li + li:before {
+    padding: 0 10px;
+    color: #eee;
+    content: "|\00a0";
+    font-size: 14px;
+}
+
+nav a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button a:link {
+    text-decoration: none;
+}
+
+.button a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button a:visited {
+}
+
+.clearer {
+    clear: both;
+}
+
+.selected {
+    color: #b94a48;
+}
+
+div.view {
+    margin: 20px 40px;
+    font-weight: 300;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.brand-position {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+}
+
+.third-line {
+    color: #bbb;
+}
+
+.second-line {
+    color: #ccc;
+}
+
+.last-line {
+    color: #eee;
+}
+
+.left {
+    float: left;
+    display: inline-block;
+    width: 40%;
+}
+
+.right {
+    float: right;
+    padding-top: 30px;
+    width: 60%;
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    header div.brand .brand-caption {
+        display: none;
+    }
+
+    .right {
+        padding-top: 10px;
+        width: 100%;
+    }
 }

@@ -15,7 +15,10 @@
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-</head>
+
+      <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700' rel='stylesheet' type='text/css'>
+
+  </head>
   <body ng-app="portfolioApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -27,7 +30,40 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <header ng-controller="HeaderController">
+        <div class="bar">
+            <div class="brand">
+                <h1>Michael Vu</h1>
+                <div class="brand-position" ng-cloak>
+                <brandcaption state="main">var info = {
+        age: 22,
+        <span class="third-line">education: 'UC Irvine',</span>
+        <span class="second-line">description: 'Software Engineer'</span>
+    <span class="last-line">};</span></brandcaption>
+                <brandcaption state="projects">
+
+
+$projects = array(
+                </brandcaption>
+                <brandcaption state="resume">var info = {
+        age: 22,
+        <span class="third-line">education: 'UC Irvine',</span>
+        <span class="second-line">description: 'Software Engineer'</span>
+    <span class="last-line">};</span></brandcaption>
+                </div>
+            </div>
+            <nav ng-cloak>
+                <links>
+                    <a class="button" ui-sref="main">About</a>
+                    <a class="button" ui-sref="projects">Projects</a>
+                    <a class="button" ui-sref="resume">Resume</a>
+                </links>
+            </nav>
+        </div>
+        <div class="clearer"><!-- --></div>
+    </header>
+    <hr />
+    <div class="view" ng-animate="view" ui-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -44,30 +80,33 @@
     <script src="bower_components/angular/angular.js"></script>
 
         <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+        <script src="bower_components/bootstrap-sass/js/affix.js"></script>
+        <script src="bower_components/bootstrap-sass/js/alert.js"></script>
+        <script src="bower_components/bootstrap-sass/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass/js/modal.js"></script>
+        <script src="bower_components/bootstrap-sass/js/transition.js"></script>
+        <script src="bower_components/bootstrap-sass/js/button.js"></script>
+        <script src="bower_components/bootstrap-sass/js/popover.js"></script>
+        <script src="bower_components/bootstrap-sass/js/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/js/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/js/tab.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/modules.js -->
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/directives/links.js"></script>
+        <script src="scripts/directives/button.js"></script>
+        <script src="scripts/directives/caption.js"></script>
         <!-- endbuild -->
 </body>
 </html>
